@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /#carteira
+
+Sitemap: https://seu-usuario.github.io/klaro-capital/sitemap.xml
