@@ -16,3 +16,79 @@ footer{border-top:1px solid var(--border);background:var(--surface)}.footer-grid
 @media print{.site-header,footer,.tool-nav,.calc-actions,.data-actions,.button-row{display:none!important}body{background:#fff;color:#111}.panel,.calculator-card{border-color:#bbb;box-shadow:none}}
 .about-photo{margin:0;overflow:hidden;background:var(--surface-3)}
 .about-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:center top;border-radius:inherit}
+
+/* Escala tipográfica revisada para leitura confortável */
+body{font-size:16.5px}
+.site-header{height:86px}
+.nav-shell{width:min(1400px,calc(100% - 44px));gap:38px}
+.brand-compact img{width:238px}
+.nav-links button{font-size:15.5px;padding:13px 15px}
+.currency-select{height:44px;padding-inline:11px}
+.currency-select select{font-size:14px}
+.icon-button,.mobile-toggle{width:44px;height:44px}
+.eyebrow,.overline{font-size:13px}
+.hero-copy>p{font-size:19px}
+.trust-row span{font-size:14px}
+.visual-top{font-size:15px}
+.demo-pill{font-size:11px}
+.positive{font-size:14px}
+.allocation-mini{font-size:13px}
+.quick-strip b{font-size:17px}
+.quick-strip small{font-size:14px;line-height:1.45}
+.section-heading>span,.section-heading>div>span{font-size:13px}
+.section-heading p,.feature-grid p,.article-grid p{font-size:16px}
+.feature-grid h3,.article-grid h3{font-size:20px}
+.about-inner cite{font-size:13px}
+.article-grid article>span{font-size:12px}
+.article-grid button,.text-link{font-size:15px}
+.article-modal>span{font-size:13px}
+.article-modal p,.legal-copy p,.placeholder-box p,.principles p,.contact-card p{font-size:16px}
+.toc a{font-size:14px}
+.editorial-note{font-size:13px}
+.filter-bar input,.filter-bar select{font-size:15px}
+.tool-nav>button{font-size:15px}
+.privacy-card b{font-size:14px}
+.privacy-card p{font-size:13px}
+.calc-header>div>span{font-size:12px}
+.calc-header p{font-size:16px}
+.educational-badge{font-size:12px}
+.field span{font-size:14px}
+.field input,.field select{font-size:16px}
+.metric span{font-size:13px}
+.formula b{font-size:13px}
+.formula p{font-size:15px}
+.goal-result p{font-size:15px}
+.method-grid b{font-size:14px}
+.method-grid p{font-size:14px}
+.scenario-head{font-size:12px}
+.scenario-row label,.scenario-row strong{font-size:14px}
+.table-note{font-size:13px}
+.notice{font-size:14px}
+.panel-head span{font-size:11px}
+.panel-head small{font-size:12px}
+.targets>div>div:first-child{font-size:14px}
+.asset-panel th{font-size:11px}
+.asset-panel td{font-size:14px}
+.asset-panel td:first-child small{font-size:11px}
+.transaction-list>div{font-size:14px}
+.principles>div>span{font-size:13px}
+.contact-card small{font-size:13px}
+.footer-grid .brand img{width:250px}
+.footer-grid p,.footer-grid span,.footer-grid button,.footer-grid b{font-size:14px}
+.footer-bottom{font-size:12px}
+
+@media(max-width:1000px){
+  .site-header{height:78px}
+  .nav-links{top:78px}
+  .brand-compact img{width:215px}
+}
+@media(max-width:720px){
+  body{font-size:16px}
+  .site-header{height:70px}
+  .nav-links{top:70px}
+  .brand-compact img{width:178px}
+  .nav-links button{font-size:16px}
+  .hero-copy>p{font-size:17px}
+  .trust-row span{font-size:13px}
+  .quick-strip small{font-size:13px}
+}
