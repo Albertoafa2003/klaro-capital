@@ -3,9 +3,10 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Chart, ArcElement, CategoryScale, LinearScale, LineElement, PointElement, Tooltip, Legend, Filler, LineController, DoughnutController } from "chart.js";
 import {
-  ArrowRight, BarChart3, BookOpen, BriefcaseBusiness, Calculator, ChevronDown, Download,
-  Eye, EyeOff, FileText, Landmark, Menu, Moon, Plus, Search, ShieldCheck, Sparkles,
-  Sun, Target, Trash2, TrendingUp, Upload, WalletCards, X
+  ArrowRight, BarChart3, BookOpen, Calculator, ChevronDown, Download,
+  Building2, CheckCircle2, Compass, Eye, EyeOff, FileText, Globe2, HeartHandshake,
+  HomeIcon, Landmark, Layers3, Menu, Moon, PieChart, Plus, Search, ShieldCheck,
+  Sparkles, Sun, Target, Trash2, TrendingUp, Upload, WalletCards, X
 } from "lucide-react";
 import {
   annualizedReturn, compoundInterest, presentValueReal, realReturn, requiredMonthlyContribution,
@@ -127,9 +128,63 @@ function Home() {
       <div className="allocation-mini"><span><i className="gold"/>Renda fixa 42%</span><span><i className="blue"/>Renda variável 36%</span><span><i className="green"/>Outros 22%</span></div>
     </div></section>
     <section className="quick-strip section-shell"><button onClick={() => navigate("ferramentas")}><Calculator/><span><b>6 calculadoras</b><small>Simule com premissas claras</small></span><ArrowRight/></button><button onClick={() => navigate("carteira")}><WalletCards/><span><b>Carteira local-first</b><small>Organize ativos com privacidade</small></span><ArrowRight/></button><button onClick={() => navigate("educacao")}><BookOpen/><span><b>Conteúdo didático</b><small>Aprenda antes de decidir</small></span><ArrowRight/></button></section>
-    <section className="content-section section-shell"><div className="section-heading"><span>PLANEJAMENTO COM PROPÓSITO</span><h2>Decisões melhores começam com uma visão mais clara.</h2><p>A Klaro Capital reúne conhecimento, ferramentas e organização em uma experiência desenhada para o longo prazo.</p></div><div className="feature-grid"><article><div className="feature-icon"><Target/></div><h3>Transforme objetivos em metas</h3><p>Calcule o aporte necessário, teste cenários e acompanhe a distância até cada objetivo.</p></article><article><div className="feature-icon"><BriefcaseBusiness/></div><h3>Entenda sua alocação</h3><p>Visualize concentração, moedas, instituições e desvios em relação à estratégia definida.</p></article><article><div className="feature-icon"><BookOpen/></div><h3>Aprenda com autonomia</h3><p>Conteúdo claro para compreender conceitos, riscos e premissas sem atalhos ou promessas.</p></article></div></section>
-    <section className="about-band"><div className="section-shell about-inner"><div className="portrait-placeholder">K<span>Foto profissional<br/>a inserir</span></div><div><span className="overline">SEU ESPECIALISTA</span><h2>Klerton, CFP®</h2><p>Planejamento financeiro com linguagem acessível, critérios objetivos e respeito ao perfil de cada investidor.</p><button className="text-link" onClick={() => navigate("sobre")}>Conheça a abordagem <ArrowRight/></button></div><blockquote>“Patrimônio não se constrói com pressa. Constrói-se com clareza, disciplina e decisões que fazem sentido para a sua vida.”<cite>— Texto-base para revisão de Klerton</cite></blockquote></div></section>
+
+    <section className="profile-spotlight section-shell" aria-labelledby="profile-title">
+      <figure className="profile-portrait"><img src="assets/klerton-profile.png" alt="Klerton, especialista responsável pela Klaro Capital"/><figcaption><span>CFP®</span><b>Planejamento com método</b></figcaption></figure>
+      <div className="profile-copy"><span className="overline">CONHEÇA KLERTON</span><h2 id="profile-title">Clareza técnica para decisões que pertencem à sua vida.</h2><p>Klerton é o especialista responsável pela Klaro Capital. Como profissional CFP®, sua abordagem conecta organização financeira, objetivos familiares e estratégia de investimentos com linguagem clara e visão de longo prazo.</p>
+        <div className="profile-principles"><div><ShieldCheck/><span><b>Transparência</b><small>Premissas e riscos explicados</small></span></div><div><Target/><span><b>Objetivos primeiro</b><small>Estratégia alinhada à realidade</small></span></div><div><Compass/><span><b>Visão integral</b><small>Vida, patrimônio e futuro</small></span></div></div>
+        <button className="text-link" onClick={() => navigate("sobre")}>Conheça os princípios de atuação <ArrowRight/></button>
+      </div>
+    </section>
+
+    <section className="learning-section"><div className="section-shell">
+      <div className="section-heading horizontal learning-heading"><div><span>PAINEL EDUCACIONAL</span><h2>Conhecimento em camadas, do essencial ao estratégico.</h2></div><p>Uma trilha visual para estudar no seu ritmo, entender as escolhas e conversar sobre patrimônio com mais segurança.</p></div>
+      <div className="learning-dashboard">
+        <article className="learning-feature"><div className="learning-orbit"><BookOpen/><i/><i/><i/></div><span className="panel-kicker">TRILHA KLARO</span><h3>Aprender antes de decidir</h3><p>Conteúdos organizados para transformar conceitos financeiros em critérios práticos.</p><button className="primary" onClick={() => navigate("educacao")}>Abrir biblioteca <ArrowRight size={17}/></button></article>
+        <div className="learning-path">
+          <article><span>01</span><div><b>Fundamentos</b><small>Orçamento, reserva e organização</small></div><CheckCircle2/></article>
+          <article><span>02</span><div><b>Construção</b><small>Metas, aportes e diversificação</small></div><TrendingUp/></article>
+          <article><span>03</span><div><b>Estratégia</b><small>Tributação, previdência e patrimônio</small></div><Layers3/></article>
+          <article><span>04</span><div><b>Autonomia</b><small>Revisão e tomada de decisão</small></div><Compass/></article>
+        </div>
+        <aside className="learning-index"><div><span>8</span><small>categorias de conteúdo</small></div><div><span>3</span><small>níveis de aprofundamento</small></div><div><span>100%</span><small>educacional e transparente</small></div></aside>
+      </div>
+    </div></section>
+
+    <section className="planning-section section-shell" aria-labelledby="planning-title">
+      <div className="planning-copy"><span className="overline">PLANEJAMENTO INDIVIDUAL E FAMILIAR</span><h2 id="planning-title">O dinheiro ganha sentido quando o plano começa pela vida.</h2><p>Planejar é conectar o presente às decisões que sustentam a família: proteção, educação, moradia, aposentadoria e legado. O painel organiza prioridades, prazos e responsabilidades em uma visão única.</p>
+        <ul><li><CheckCircle2/>Diagnóstico da realidade financeira</li><li><CheckCircle2/>Metas compartilhadas e prioridades</li><li><CheckCircle2/>Proteção, liquidez e longo prazo</li><li><CheckCircle2/>Revisões conforme a vida muda</li></ul>
+        <button className="secondary" onClick={() => navigate("ferramentas")}>Simular uma meta <ArrowRight size={17}/></button>
+      </div>
+      <div className="family-dashboard" aria-label="Exemplo visual de planejamento familiar">
+        <div className="family-top"><span><HeartHandshake/> Plano familiar</span><small>VISÃO INTEGRADA</small></div>
+        <div className="life-map"><div className="life-line"/><article className="now"><i><HomeIcon/></i><span><small>AGORA</small><b>Base financeira</b><em>Reserva e proteção</em></span></article><article><i><BookOpen/></i><span><small>5–10 ANOS</small><b>Projetos da família</b><em>Educação e moradia</em></span></article><article><i><Target/></i><span><small>LONGO PRAZO</small><b>Independência</b><em>Aposentadoria e legado</em></span></article></div>
+        <div className="family-metrics"><div><span>Proteção</span><b>Base</b><i className="complete"/></div><div><span>Projetos</span><b>Construção</b><i className="progressing"/></div><div><span>Futuro</span><b>Estratégia</b><i className="starting"/></div></div>
+        <p>Exemplo conceitual. Cada planejamento depende da realidade e das prioridades de cada pessoa ou família.</p>
+      </div>
+    </section>
+
+    <section className="markets-section"><div className="section-shell">
+      <div className="section-heading"><span>DUAS PERSPECTIVAS, UMA ESTRATÉGIA</span><h2>Brasil e mundo dentro da mesma visão patrimonial.</h2><p>A alocação deve considerar objetivos, moedas, riscos e horizontes — não apenas produtos ou plataformas.</p></div>
+      <div className="market-grid">
+        <article className="market-card brazil"><div className="market-head"><span className="market-icon"><Building2/></span><div><small>INVESTIMENTOS NO BRASIL</small><h3>Mercado nacional</h3></div><span className="platform-chip">XP · BRASIL</span></div><p>Organização das oportunidades locais com atenção a liquidez, tributação, risco de crédito e função de cada classe na carteira.</p><div className="market-visual"><div className="market-bars"><i/><i/><i/><i/></div><div className="market-labels"><span>Caixa</span><span>Renda fixa</span><span>Fundos</span><span>Bolsa</span></div></div><ul><li>Tesouro e crédito privado</li><li>Fundos, ações, ETFs e FIIs</li><li>Previdência e eficiência tributária</li></ul></article>
+        <article className="market-card global"><div className="market-head"><span className="market-icon"><Globe2/></span><div><small>INVESTIMENTOS INTERNACIONAIS</small><h3>Diversificação global</h3></div><span className="platform-chip">AVENUE · XP</span></div><p>Exposição internacional analisada como parte do patrimônio total, considerando moeda, jurisdição, custos e diversificação geográfica.</p><div className="market-visual globe-visual"><div className="globe-core"><Globe2/><i/><i/><i/></div><span className="route one"/><span className="route two"/><span className="route three"/></div><ul><li>Moedas e diversificação geográfica</li><li>ETFs, ações e renda fixa global</li><li>Custos, remessas e riscos cambiais</li></ul></article>
+      </div>
+      <p className="market-disclaimer"><ShieldCheck/> XP e Avenue são mencionadas apenas como plataformas indicadas no escopo deste site. A menção não afirma vínculo, parceria ou recomendação de produtos.</p>
+    </div></section>
+
+    <section className="segments-section section-shell" aria-labelledby="segments-title">
+      <div className="section-heading horizontal"><div><span>SEGMENTOS DE ATENDIMENTO</span><h2 id="segments-title">A complexidade muda. O método permanece.</h2></div><p>Faixas indicativas para organizar necessidades patrimoniais — sempre sujeitas à avaliação do escopo e da adequação do atendimento.</p></div>
+      <div className="segment-grid">
+        <article><span className="segment-number">01</span><div className="segment-orbit starter"><WalletCards/></div><small>PATRIMÔNIO FINANCEIRO</small><h3>R$ 300 mil a R$ 1 milhão</h3><p>Estruturação das bases, organização da carteira, metas familiares e rotina de acompanhamento.</p><div className="segment-tags"><span>Organização</span><span>Alocação</span><span>Metas</span></div></article>
+        <article className="featured"><span className="segment-number">02</span><div className="segment-orbit growth"><PieChart/></div><small>PATRIMÔNIO EM CONSOLIDAÇÃO</small><h3>R$ 1 milhão a R$ 10 milhões</h3><p>Visão consolidada, diversificação entre mercados, eficiência e coordenação de objetivos de longo prazo.</p><div className="segment-tags"><span>Brasil + exterior</span><span>Previdência</span><span>Sucessão</span></div></article>
+        <article><span className="segment-number">03</span><div className="segment-orbit legacy"><Layers3/></div><small>ALTA COMPLEXIDADE PATRIMONIAL</small><h3>Acima de R$ 10 milhões</h3><p>Mapeamento de estruturas complexas e articulação com profissionais habilitados conforme cada necessidade.</p><div className="segment-tags"><span>Governança</span><span>Legado</span><span>Coordenação</span></div></article>
+      </div>
+      <div className="segments-cta"><div><b>Em qual momento patrimonial você está?</b><span>O enquadramento considera mais do que o valor: objetivos, família, liquidez e complexidade também importam.</span></div><button className="secondary" onClick={() => navigate("sobre")}>Conheça a abordagem <ArrowRight size={17}/></button></div>
+    </section>
+
     <section className="content-section section-shell"><div className="section-heading horizontal"><div><span>CONTEÚDO RECENTE</span><h2>Conhecimento para investir melhor.</h2></div><button className="secondary" onClick={() => navigate("educacao")}>Ver biblioteca</button></div><div className="article-grid">{articles.slice(0,3).map(a => <article key={a.id}><span>{a.category} · {a.minutes} min</span><h3>{a.title}</h3><p>{a.excerpt}</p><button onClick={() => navigate("educacao")}>Ler artigo <ArrowRight size={15}/></button></article>)}</div></section>
+    <section className="home-legal-note section-shell"><ShieldCheck/><p><b>Conteúdo educacional e informativo.</b> Planejamento e simulações não representam promessa de resultado. Produtos, plataformas e soluções devem ser avaliados conforme objetivos, perfil de risco e circunstâncias pessoais.</p></section>
   </>;
 }
 
